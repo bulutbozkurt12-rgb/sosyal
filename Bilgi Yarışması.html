@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5. Sınıf Sosyal Bilgiler - Atatürk Ortaokulu 5/B</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <h1>SOSYAL BİLGİLER BİLGİ YARIŞMASI</h1>
+            <h2>Atatürk Ortaokulu 5/B</h2>
+            <div class="mascot-area">
+                <!-- Mascot image or placeholder could go here -->
+                <div class="mascot-placeholder">🇹🇷</div>
+            </div>
+            <button id="start-btn" class="btn-primary">BAŞLA</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen hidden">
+            <!-- Group Scoreboard -->
+            <div class="scoreboard-container">
+                <div id="group1-score" class="group-card active-turn">
+                    <h3>1. GRUP</h3>
+                    <div class="score">0</div>
+                </div>
+                <div id="group2-score" class="group-card">
+                    <h3>2. GRUP</h3>
+                    <div class="score">0</div>
+                </div>
+                <div id="group3-score" class="group-card">
+                    <h3>3. GRUP</h3>
+                    <div class="score">0</div>
+                </div>
+            </div>
+
+            <div class="header-bar">
+                <div class="turn-indicator">Sıra: <span id="current-turn">1. GRUP</span></div>
+                <div class="timer">Süre: <span id="timer">00:40</span></div>
+            </div>
+            <div class="progress_bar_container">
+                <div id="progress_bar"></div>
+            </div>
+
+            <div class="question-container">
+                <h3 id="question-text">Soru buraya gelecek...</h3>
+                <div id="options-container" class="options-grid">
+                    <!-- Options will be injected by JS -->
+                </div>
+            </div>
+            <div id="feedback-message" class="hidden"></div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="screen hidden">
+            <h1>OYUN BİTTİ!</h1>
+            <p class="final-score">Toplam Puan: <span id="final-score">0</span></p>
+            <div id="stars-container"></div>
+            <button id="restart-btn" class="btn-primary">TEKRAR OYNA</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
